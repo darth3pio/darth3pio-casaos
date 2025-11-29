@@ -73,6 +73,8 @@ x-casaos:
     - https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant/screenshot-2.jpg
     - https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant/screenshot-3.jpg
     - https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant/screenshot-4.jpg
+  tagline:
+    en_US: Whole home music control from the Foundation that brought you Home Assistant
   tips: {}
   title:
     en_US: Music Assistant
