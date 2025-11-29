@@ -1,9 +1,13 @@
-name: musicassistant
+name: musicassistant-nightly
 services:
-  musicassistant:
+  musicassistant-nightly:
     environment:
       LOG_LEVEL: info
     image: ghcr.io/music-assistant/server:2.7.0.dev2025112904
+    deploy:
+      resources:
+        reservations:
+          memory: 256M
     network_mode: host
     security_opt:
       - apparmor:unconfined
