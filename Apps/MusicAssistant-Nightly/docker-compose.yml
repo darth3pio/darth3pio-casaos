@@ -24,20 +24,10 @@ services:
       - apparmor:unconfined
     privileged: true
     x-casaos:
-      envs:
-        - container: TZ
-          description:
-            en_GB: TimeZone
-        - container: PUID
-          description:
-            en_GB: Run MusicAssistant as specified uid.
-        - container: PGID
-          description:
-            en_GB: Run MusicAssistant as specified gid.
       volumes:
         - container: /data
           description:
-            en_GB: MusicAssistant data directory.
+            en_US: MusicAssistant data directory.
     container_name: MusicAssistant-Nightly
 x-casaos:
   architectures:
@@ -48,7 +38,7 @@ x-casaos:
   author: darth3pio
   category: Media
   description:
-    en_GB: |
+    en_US: |
       The Music Assistant server is a free, opensource Media library manager that connects to your streaming services and a wide range 
       of connected speakers. The server is the beating heart, the core of Music Assistant and it keeps track of your music sources. It must 
       run on an always-on device like a Raspberry Pi, a NAS or an Intel NUC or alike. The server can access multiple music providers and 
@@ -72,6 +62,6 @@ x-casaos:
   thumbnail: https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant-Nightly/thumbnail.png
   tips: {}
   title:
-    en_GB: Music Assistant Nightly
+    en_US: Music Assistant Nightly
   index: /
   port_map: "8095"
