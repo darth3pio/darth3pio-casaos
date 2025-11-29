@@ -4,10 +4,6 @@ services:
     environment:
       LOG_LEVEL: info
     image: ghcr.io/music-assistant/server:2.6.3
-    deploy:
-      resources:
-        reservations:
-          memory: 256M
     network_mode: host
     security_opt:
       - apparmor:unconfined
@@ -30,7 +26,10 @@ services:
             en_us: 'Container Path:  bind'
         - container: ' /data'
           description:
-            en_US: MusicAssistant data directory.    
+            en_US: MusicAssistant data directory.
+        - container: ' /Media'
+          description:
+            en_US: CasaOS Media directory.    
     container_name: MusicAssistant
 x-casaos:
   architectures:
@@ -63,6 +62,7 @@ x-casaos:
       **Learn More:**
       - [Music Assistant Official Website](https://www.music-assistant.io/)
   thumbnail: https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant/thumbnail.png
+  icon: https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant/icon.png
   tips: {}
   title:
     en_US: Music Assistant
