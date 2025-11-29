@@ -36,7 +36,7 @@ x-casaos:
     - amd64
     - arm64
     - arm
-  main: MusicAssistant Nightly
+  main: musicassistant-nightly
   author: darth3pio
   category: Media
   description:
@@ -61,8 +61,14 @@ x-casaos:
 
       **Learn More:**
       - [Music Assistant Official Website](https://www.music-assistant.io/)
+  developer: Music Assistant
   thumbnail: https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant-Nightly/thumbnail.png
   icon: https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant-Nightly/icon.png
+  screenshot_link:
+    - https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant-Nightly/screenshot-1.jpg
+    - https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant-Nightly/screenshot-2.jpg
+    - https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant-Nightly/screenshot-3.jpg
+    - https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant-Nightly/screenshot-4.jpg
   tips: {}
   title:
     en_US: Music Assistant Nightly
