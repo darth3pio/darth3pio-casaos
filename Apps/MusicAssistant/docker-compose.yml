@@ -30,7 +30,7 @@ services:
         - container: ' /Media'
           description:
             en_US: CasaOS Media directory.    
-    container_name: MusicAssistant
+    container_name: musicassistant
 x-casaos:
   architectures:
     - amd64
