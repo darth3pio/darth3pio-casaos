@@ -1,4 +1,4 @@
 [
-    { "appid": "homeassistant" },
-    { "appid": "musicassistant" }
+    { "appid": "musicassistant" },
+    { "appid": "musicassistant-nightly" }
 ]

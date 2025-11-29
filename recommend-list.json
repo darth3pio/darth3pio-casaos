@@ -1,29 +1,8 @@
 [
   {
-    "appid": "jellyfin"
+    "appid": "musicassistant"
   },
   {
-    "appid": "archivebox"
-  },
-  {
-    "appid": "ragflow"
-  },
-  {
-    "appid": "cloudflared"
-  },
-  {
-    "appid": "memos"
-  },
-  {
-    "appid": "transmission"
-  },
-  {
-    "appid": "immich"
-  },
-  {
-    "appid": "n8n"
-  },
-  {
-    "appid": "swingmusic"
+    "appid": "musicassistant-nightly"
   }
 ]
