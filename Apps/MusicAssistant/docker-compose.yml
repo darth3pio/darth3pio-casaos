@@ -9,6 +9,11 @@ services:
         reservations:
           memory: 256M
     network_mode: host
+    security_opt:
+      - apparmor:unconfined
+    cap_add:
+      - SYS_ADMIN
+      - DAC_READ_SEARCH
     restart: unless-stopped
     volumes:
       - type: bind
@@ -16,12 +21,7 @@ services:
         target: /data
       - type: bind
         source: /DATA/Media
-        target: /Media 
-    cap-add:
-      - SYS_ADMIN
-      - DAC_READ_SEARCH
-    security_opt:
-      - apparmor:unconfined
+        target: /Media
     privileged: true
     x-casaos:
       volumes:
