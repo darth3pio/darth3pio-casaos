@@ -25,9 +25,12 @@ services:
     privileged: true
     x-casaos:
       volumes:
-        - container: /data
+        - container: ' bind'
           description:
-            en_US: MusicAssistant data directory.
+            en_us: 'Container Path:  bind'
+        - container: ' /data'
+          description:
+            en_US: MusicAssistant data directory.    
     container_name: MusicAssistant
 x-casaos:
   architectures:
