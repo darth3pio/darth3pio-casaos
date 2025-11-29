@@ -3,7 +3,7 @@ services:
   musicassistant:
     environment:
       LOG_LEVEL: info
-    image: ghcr.io/music-assistant/server:latest
+    image: ghcr.io/music-assistant/server:2.7.0.dev2025112904
     deploy:
       resources:
         reservations:
@@ -12,7 +12,7 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /DATA/AppData/musicassistant-nightly/data
+        source: /DATA/AppData/$AppID/data
         target: /data
       - type: bind
         source: /DATA/Media

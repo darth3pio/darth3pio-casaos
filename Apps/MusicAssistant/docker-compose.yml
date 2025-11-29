@@ -12,7 +12,7 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /DATA/AppData/musicassistant/data
+        source: /DATA/AppData/$AppID/data
         target: /data
       - type: bind
         source: /DATA/Media
