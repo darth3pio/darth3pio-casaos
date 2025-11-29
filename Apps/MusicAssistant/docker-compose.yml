@@ -32,17 +32,17 @@ services:
       envs:
         - container: TZ
           description:
-            en_AU: TimeZone
+            en_GB: TimeZone
         - container: PUID
           description:
-            en_AU: Run MusicAssistant as specified uid.
+            en_GB: Run MusicAssistant as specified uid.
         - container: PGID
           description:
-            en_AU: Run MusicAssistant as specified gid.
+            en_GB: Run MusicAssistant as specified gid.
       volumes:
         - container: /data
           description:
-            en_AU: MusicAssistant data directory.
+            en_GB: MusicAssistant data directory.
     container_name: MusicAssistant
 x-casaos:
   architectures:
@@ -53,7 +53,7 @@ x-casaos:
   author: darth3pio
   category: Media
   description:
-    en_AU: |
+    en_GB: |
       The Music Assistant server is a free, opensource Media library manager that connects to your streaming services and a wide range 
       of connected speakers. The server is the beating heart, the core of Music Assistant and it keeps track of your music sources. It must 
       run on an always-on device like a Raspberry Pi, a NAS or an Intel NUC or alike. The server can access multiple music providers and 
@@ -77,6 +77,6 @@ x-casaos:
   thumbnail: https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant/thumbnail.png
   tips: {}
   title:
-    en_US: Home Assistant
+    en_GB: Music Assistant
   index: /
   port_map: "8095"
