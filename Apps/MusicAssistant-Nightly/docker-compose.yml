@@ -43,7 +43,7 @@ services:
         - container: /data
           description:
             en_AU: MusicAssistant data directory.
-    container_name: MusicAssistant
+    container_name: MusicAssistant-Nightly
 x-casaos:
   architectures:
     - amd64
