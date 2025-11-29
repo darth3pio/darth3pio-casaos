@@ -51,7 +51,7 @@ x-casaos:
     - arm
   main: MusicAssistant Nightly
   author: darth3pio
-  category: Media
+  category: darth3pio
   description:
     en_GB: |
       The Music Assistant server is a free, opensource Media library manager that connects to your streaming services and a wide range 
