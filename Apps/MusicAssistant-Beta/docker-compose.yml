@@ -1,0 +1,82 @@
+name: musicassistant-beta
+services:
+  musicassistant-beta:
+    environment:
+      LOG_LEVEL: info
+    image: ghcr.io/music-assistant/server:2.7.0b19
+    deploy:
+      resources:
+        reservations:
+          memory: 256M
+    network_mode: host
+    security_opt:
+      - apparmor:unconfined
+    cap_add:
+      - SYS_ADMIN
+      - DAC_READ_SEARCH
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/data
+        target: /data
+      - type: bind
+        source: /DATA/Media
+        target: /Media
+    privileged: true
+    x-casaos:
+      volumes:
+        - container: ' bind'
+          description:
+            en_us: 'Container Path:  bind'
+        - container: ' /data'
+          description:
+            en_US: MusicAssistant data directory.
+        - container: ' /Media'
+          description:
+            en_US: CasaOS Media directory.            
+    container_name: musicassistant-beta
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+    - arm
+  main: musicassistant-beta
+  author: darth3pio
+  category: Media
+  description:
+    en_US: |
+      The Music Assistant server is a free, opensource Media library manager that connects to your streaming services and a wide range 
+      of connected speakers. The server is the beating heart, the core of Music Assistant and it keeps track of your music sources. It must 
+      run on an always-on device like a Raspberry Pi, a NAS or an Intel NUC or alike. The server can access multiple music providers and 
+      stream to multiple player types.
+
+      **Key Features:**
+      - Supports multiple music sources through a provider implementation
+      - Many popular streaming services are supported, as well as local files
+      - Automatically matches music on different providers (track linking)
+      - Fetches metadata for extended artist information
+      - Keeps track of the entire music library in a compact database
+      - Gapless, crossfade and volume normalization support for all players
+      - Playback synchronisation is possible for supported players
+      - Announcements during playback supported
+      - Transfer of playback between players supported
+      - Truly hassle free streaming of your favourite music to players, no advanced knowledge required
+      - Rich User interface (Progressive Web App) powered by logoVueJS 3
+
+      **Learn More:**
+      - [Music Assistant Official Website](https://www.music-assistant.io/)
+  developer: Music Assistant
+  thumbnail: https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant-Beta/thumbnail.png
+  icon: https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant-Beta/icon.png
+  screenshot_link:
+    - https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant-Beta/screenshot-1.jpg
+    - https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant-Beta/screenshot-2.jpg
+    - https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant-Beta/screenshot-3.jpg
+    - https://cdn.jsdelivr.net/gh/darth3pio/darth3pio-casaos@main/Apps/MusicAssistant-Beta/screenshot-4.jpg
+  tagline:
+    en_US: Whole home music control from the Foundation that brought you Home Assistant
+  tips: {}
+  title:
+    en_US: Music Assistant Beta
+  index: /
+  port_map: "8095"
