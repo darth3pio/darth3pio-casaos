@@ -3,6 +3,9 @@
     "appid": "musicassistant"
   },
   {
+    "appid": "musicassistant-beta"
+  },
+  {
     "appid": "musicassistant-nightly"
   }
 ]
